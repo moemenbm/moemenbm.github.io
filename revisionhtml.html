@@ -63,8 +63,40 @@
         <img aligne="center" src="mbmautomedia/logombmauto.png" alt="Voiture de location">
      
     </body>
+	<script>
+  document.getElementById('reservationForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const reservationData = {
+      nom: document.getElementById('nom').value,
+      prenom: document.getElementById('prenom').value,
+      cin: document.getElementById('cin').value,
+      email: document.getElementById('email').value,
+      telephone: document.getElementById('telephone').value,
+      voiture: document.getElementById('voiture').value,
+      dateDebut: document.getElementById('date-debut').value,
+      dateFin: document.getElementById('date-fin').value,
+    };
+
+    try {
+      const response = await fetch('https://us-central1-YOUR_PROJECT_ID.cloudfunctions.net/addReservation', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(reservationData),
+      });
+
+      const result = await response.json();
+      alert(result.message);
+    } catch (error) {
+      alert('Erreur lors de la réservation');
+    }
+  });
+</script>
 
     </main>
+	
 
     <footer>
 		<p>Copyright © 2023 moemen ben maallem MBMauto Location de voitures</p>

@@ -1,14 +1,74 @@
-<!doctype html>
-<html>
-<head>
-<title>PosiFlottant</title>
-<meta charset="utf-8">
-</head>
-<body>
-<div class="conteneur">
-<div class="box">block2 </div>
-<div class="box"> block3</div>
-<div class="box">block4</div>
-</div>
-</body>
+<!DOCTYPE html>
+<html> 
+
+<head> 
+    <meta charset="UTF-8">
+	<title >Réservation</title>
+    <link rel="icon" href="mbmautomedia/logombmauto.png"  >
+	<link rel="stylesheet" href="style.css">
+</head> 
+
+<body > 
+    <!-- Entête de la page -->
+	<header>
+		<h1 aling="center" >MBMauto location de voitures</h1>
+		<img src="mbmautomedia/logombmauto.png" alt="Logo de votre entreprise" class="logo">
+		<nav>
+			<ul>		
+		<li><a href="MBMauto.html">Accueil</a></li>
+        <li><a href="voitures.html">Voitures</a></li>
+        <li><a href="reservation.html">Réservation</a></li>
+        <li><a href="avis.html">Avis</a></li>
+		<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+    <main>
+        <h1>Réservation de voitures</h1>
+        <p>Merci de remplir le formulaire ci-dessous pour réserver une voiture.</p>
+        
+        <form>
+          <label for="nom">Nom:</label><br><br>
+          <input type="text" id="nom" name="nom" required placeholder="votre nom"><br><br>
+          <label for="nom">Prénom:</label><br><br>
+          <input type="text" id="prenom" name="prenom" required placeholder="votre Prénom"><br><br>
+          <label for="cin">CIN:</label>
+          <input type="text" name="cin" id="cin"required pattern="[0-9]{8}" placeholder="numero_cin" required><br><br>
+          <label for="email">Email:</label><br><br>
+          <input type="email" id="email" name="email" placeholder="votre email" required><br><br>
+          
+          <label for="telephone">Téléphone:</label><br><br>
+          <input type="tel" id="telephone" name="telephone" placeholder="votre numero de telephone" required><br><br>
+          
+          <label for="voiture">Voiture:</label><br><br>
+          <select id="voiture" name="voiture"><br><br>
+            <option value="">Sélectionnez une voiture</option>
+            <option value="voiture1">Modéle SKODA FABIA</option>
+            <option value="voiture2">Modéle POLO 8</option>
+            <option value="voiture3">Modéle SEAT IBIZA</option>
+            <option value="voiture1">Modéle PEUGEOT 208</option>
+            <option value="voiture2">Modéle MERCEDES-BENZ CLA</option>
+            <option value="voiture3">Modéle BMW SERIE 7</option>
+           
+          </select>
+          
+          <label for="date-debut">Date de début:</label><br><br>
+          <input type="date" id="date-debut" name="date-debut" required><br><br>
+          
+          <label for="date-fin">Date de fin:</label><br><br>
+          <input type="date" id="date-fin" name="date-fin" required><br><br>
+          
+          <button type="submit" aligne = "right"><a href="felicitation.html">Réserver</a></button>
+        </form>  
+        <img aligne="center" src="mbmautomedia/logombmauto.png" alt="Voiture de location">
+     
+    </body>
+
+    </main>
+
+    <footer>
+		<p>Copyright © 2023 moemen ben maallem MBMauto Location de voitures</p>
+	</footer>
+  </body>
+
 </html>
